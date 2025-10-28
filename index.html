@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rao Mueez | Digital Creator</title>
+<link rel="shortcut icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDwfJJ-l-2FKq0aEY6CKpi2KOkQcOyc8YQy8Rw8EqKCPXJxQLCMjb8sJnNLs_NGeWKuJvopiyH_7HvdyaCDurduqgrhtxIVzgLBxL45gP4LYk5oPZT2UxcRdqRZXj6UOipT_zoqqmKoo-Ux45BTm6LtU1ydF15hdIF5HLWahrJMbYOk8i2h3vU2e3jKXJq/s320/Untitled%20design%20(3).png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root {
+--primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+--secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+--accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+--dark-gradient: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+--text-color: #333;
+--light-text: #fff;
+--shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+--transition: all 0.3s ease;
+}
+body {
+background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+color: var(--text-color);
+overflow-x: hidden;
+position: relative;
+}
+/* Animated Background */
+.bg-animation {
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+z-index: -1;
+opacity: 0.4;
+}
+.bg-animation span {
+position: absolute;
+display: block;
+width: 20px;
+height: 20px;
+background: var(--accent-gradient);
+animation: move 25s linear infinite;
+bottom: -150px;
+}
+.bg-animation span:nth-child(1) {
+left: 25%;
+width: 80px;
+height: 80px;
+animation-delay: 0s;
+}
+.bg-animation span:nth-child(2) {
+left: 10%;
+width: 20px;
+height: 20px;
+animation-delay: 2s;
+animation-duration: 12s;
+}
+.bg-animation span:nth-child(3) {
+left: 70%;
+width: 20px;
+height: 20px;
+animation-delay: 4s;
+}
+.bg-animation span:nth-child(4) {
+left: 40%;
+width: 60px;
+height: 60px;
+animation-delay: 0s;
+animation-duration: 18s;
+}
+.bg-animation span:nth-child(5) {
+left: 65%;
+width: 20px;
+height: 20px;
+animation-delay: 0s;
+}
+.bg-animation span:nth-child(6) {
+left: 75%;
+width: 110px;
+height: 110px;
+animation-delay: 3s;
+}
+.bg-animation span:nth-child(7) {
+left: 35%;
+width: 150px;
+height: 150px;
+animation-delay: 7s;
+}
+.bg-animation span:nth-child(8) {
+left: 50%;
+width: 25px;
+height: 25px;
+animation-delay: 15s;
+animation-duration: 45s;
+}
+.bg-animation span:nth-child(9) {
+left: 20%;
+width: 15px;
+height: 15px;
+animation-delay: 2s;
+animation-duration: 35s;
+}
+.bg-animation span:nth-child(10) {
+left: 85%;
+width: 150px;
+height: 150px;
+animation-delay: 0s;
+animation-duration: 11s;
+}
+@keyframes move {
+0% {
+transform: translateY(0) rotate(0deg);
+opacity: 1;
+border-radius: 0;
+}
+100% {
+transform: translateY(-1000px) rotate(720deg);
+opacity: 0;
+border-radius: 50%;
+}
+}
+/* Header */
+header {
+background: var(--primary-gradient);
+padding: 1rem 0;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1000;
+box-shadow: var(--shadow);
+transition: var(--transition);
+}
+header.scrolled {
+padding: 0.5rem 0;
+background: var(--dark-gradient);
+}
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;
+}
+.logo {
+font-size: 1.5rem;
+font-weight: bold;
+color: var(--light-text);
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+transform-style: preserve-3d;
+transition: transform 0.5s;
+cursor: pointer;
+}
+.logo:hover {
+transform: rotateY(10deg) rotateX(-10deg);
+}
+.logo img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: 2px solid var(--light-text);
+}
+.logo-text {
+font-size: 1.2rem;
+font-weight: 600;
+}
+.nav-links {
+display: flex;
+list-style: none;
+gap: 2rem;
+}
+.nav-links a {
+color: var(--light-text);
+text-decoration: none;
+font-weight: 500;
+position: relative;
+padding: 0.5rem 1rem;
+border-radius: 5px;
+transition: var(--transition);
+transform-style: preserve-3d;
+cursor: pointer;
+}
+.nav-links a::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 5px;
+transform: translateZ(-20px);
+opacity: 0;
+transition: opacity 0.3s;
+}
+.nav-links a:hover {
+transform: translateZ(20px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.nav-links a:hover::before {
+opacity: 1;
+}
+/* Mobile Menu Toggle */
+.menu-toggle {
+display: none;
+flex-direction: column;
+cursor: pointer;
+}
+.menu-toggle span {
+width: 25px;
+height: 3px;
+background: var(--light-text);
+margin: 3px 0;
+transition: 0.3s;
+}
+/* Main Content */
+main {
+margin-top: 80px;
+min-height: calc(100vh - 80px);
+}
+section {
+padding: 6rem 2rem;
+max-width: 1200px;
+margin: 0 auto 4rem;
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+section.visible {
+opacity: 1;
+transform: translateY(0);
+}
+/* About Section */
+#about {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+.profile-container {
+position: relative;
+margin-bottom: 3rem;
+perspective: 1000px;
+}
+.profile-img {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+object-fit: cover;
+border: 5px solid transparent;
+background: linear-gradient(white, white) padding-box,
+var(--primary-gradient) border-box;
+transition: transform 0.5s;
+transform-style: preserve-3d;
+cursor: pointer;
+}
+.profile-img:hover {
+transform: rotateY(180deg);
+}
+.profile-back {
+position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+background: var(--secondary-gradient);
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 1.2rem;
+font-weight: bold;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+}
+h1 {
+font-size: 2.5rem;
+margin-bottom: 1.5rem;
+background: var(--primary-gradient);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+animation: pulse 2s infinite;
+}
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.05); }
+100% { transform: scale(1); }
+}
+.tagline {
+font-size: 1.2rem;
+margin-bottom: 3rem;
+color: #666;
+}
+.info-card {
+background: white;
+border-radius: 15px;
+padding: 2.5rem;
+box-shadow: var(--shadow);
+max-width: 600px;
+width: 100%;
+transform-style: preserve-3d;
+transition: transform 0.5s;
+cursor: pointer;
+}
+.info-card:hover {
+transform: translateY(-10px) rotateX(5deg);
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.info-item {
+display: flex;
+align-items: center;
+margin-bottom: 1.5rem;
+padding: 0.8rem;
+border-radius: 8px;
+transition: var(--transition);
+cursor: pointer;
+}
+.info-item:hover {
+background: rgba(102, 126, 234, 0.1);
+transform: translateX(10px);
+}
+.info-item i {
+font-size: 1.5rem;
+margin-right: 1rem;
+background: var(--accent-gradient);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+/* Skills Section */
+#skills {
+background: white;
+border-radius: 15px;
+box-shadow: var(--shadow);
+}
+.skills-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2.5rem;
+margin-top: 2.5rem;
+}
+.skill-card {
+background: rgba(102, 126, 234, 0.05);
+border-radius: 15px;
+padding: 2.5rem;
+text-align: center;
+transition: var(--transition);
+transform-style: preserve-3d;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+}
+.skill-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: var(--primary-gradient);
+opacity: 0;
+transition: opacity 0.3s;
+z-index: 0;
+}
+.skill-card:hover {
+transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.skill-card:hover::before {
+opacity: 0.1;
+}
+.skill-card i {
+font-size: 3rem;
+margin-bottom: 1.5rem;
+background: var(--primary-gradient);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+z-index: 1;
+position: relative;
+}
+.skill-card h3 {
+margin-bottom: 0.8rem;
+z-index: 1;
+position: relative;
+}
+.skill-card p {
+color: #666;
+z-index: 1;
+position: relative;
+}
+/* Contact Section */
+#contact {
+background: white;
+border-radius: 15px;
+box-shadow: var(--shadow);
+}
+.contact-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2.5rem;
+}
+.contact-info {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.contact-item {
+display: flex;
+align-items: center;
+margin-bottom: 2rem;
+padding: 1.2rem;
+border-radius: 10px;
+background: rgba(102, 126, 234, 0.05);
+transition: var(--transition);
+transform-style: preserve-3d;
+cursor: pointer;
+}
+.contact-item:hover {
+transform: translateZ(20px);
+background: rgba(102, 126, 234, 0.1);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.contact-item i {
+font-size: 2rem;
+margin-right: 1.2rem;
+background: var(--primary-gradient);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+.contact-form {
+background: rgba(102, 126, 234, 0.05);
+padding: 2.5rem;
+border-radius: 10px;
+}
+.form-group {
+margin-bottom: 2rem;
+}
+.form-group label {
+display: block;
+margin-bottom: 0.8rem;
+font-weight: 500;
+cursor: pointer;
+}
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 1rem;
+border: none;
+border-radius: 8px;
+background: white;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+transition: var(--transition);
+cursor: text; /* Text cursor for form inputs */
+}
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+.btn {
+background: var(--primary-gradient);
+color: white;
+border: none;
+padding: 1rem 2.5rem;
+border-radius: 30px;
+font-weight: 600;
+cursor: pointer;
+transition: var(--transition);
+transform-style: preserve-3d;
+position: relative;
+overflow: hidden;
+}
+.btn::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.2);
+transition: left 0.5s;
+}
+.btn:hover {
+transform: translateZ(10px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:hover::before {
+left: 100%;
+}
+/* Social Media Section */
+#social {
+text-align: center;
+}
+.social-container {
+display: flex;
+justify-content: center;
+gap: 2.5rem;
+margin-top: 2.5rem;
+flex-wrap: wrap;
+}
+.social-card {
+width: 220px;
+height: 270px;
+background: white;
+border-radius: 15px;
+box-shadow: var(--shadow);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 2rem;
+transition: var(--transition);
+transform-style: preserve-3d;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+}
+.social-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: var(--primary-gradient);
+opacity: 0;
+transition: opacity 0.3s;
+z-index: 0;
+}
+.social-card:hover {
+transform: translateY(-20px) rotateX(10deg) rotateY(-10deg);
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.social-card:hover::before {
+opacity: 0.1;
+}
+.social-card i {
+font-size: 3.5rem;
+margin-bottom: 1.5rem;
+z-index: 1;
+}
+.youtube i {
+color: #FF0000;
+}
+.facebook i {
+color: #1877F2;
+}
+.tiktok i {
+color: #000000;
+}
+.social-card h3 {
+margin-bottom: 0.8rem;
+z-index: 1;
+}
+.social-card a {
+color: var(--primary-gradient);
+text-decoration: none;
+font-weight: 500;
+z-index: 1;
+transition: var(--transition);
+cursor: pointer;
+}
+.social-card a:hover {
+text-decoration: none;
+}
+/* Footer */
+footer {
+background: var(--dark-gradient);
+color: var(--light-text);
+padding: 3rem 0;
+text-align: center;
+}
+.footer-content {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;
+}
+.footer-links {
+display: flex;
+justify-content: center;
+gap: 2.5rem;
+margin-bottom: 1.5rem;
+}
+.footer-links a {
+color: var(--light-text);
+text-decoration: none;
+transition: var(--transition);
+cursor: pointer;
+}
+.footer-links a:hover {
+color: #4facfe;
+}
+.social-icons {
+display: flex;
+justify-content: center;
+gap: 1.5rem;
+margin-bottom: 1.5rem;
+}
+.social-icons a {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 45px;
+height: 45px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.1);
+color: var(--light-text);
+transition: var(--transition);
+cursor: pointer;
+text-decoration: none;
+}
+.social-icons a:hover {
+background: rgba(255, 255, 255, 0.2);
+transform: translateY(-5px);
+text-decoration: none;
+}
+/* Social media icon hover colors in footer */
+.social-icons a[href*="youtube"]:hover i {
+color: #FF0000;
+}
+.social-icons a[href*="facebook"]:hover i {
+color: #1877F2;
+}
+.social-icons a[href*="tiktok"]:hover i {
+color: #000000;
+}
+
+/* Responsive Design */
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+section {
+padding: 8rem 2rem;
+margin-bottom: 5rem;
+}
+
+h1 {
+font-size: 3rem;
+}
+
+.tagline {
+font-size: 1.4rem;
+}
+
+.profile-img {
+width: 220px;
+height: 220px;
+}
+
+.profile-back {
+width: 220px;
+height: 220px;
+}
+
+.info-card {
+padding: 3rem;
+}
+
+.skill-card {
+padding: 3rem;
+}
+
+.contact-form {
+padding: 3rem;
+}
+
+.social-card {
+width: 240px;
+height: 290px;
+}
+}
+
+/* Desktop Styles */
+@media (max-width: 1199px) and (min-width: 993px) {
+section {
+padding: 7rem 2rem;
+margin-bottom: 4.5rem;
+}
+
+h1 {
+font-size: 2.8rem;
+}
+
+.profile-img {
+width: 210px;
+height: 210px;
+}
+
+.profile-back {
+width: 210px;
+height: 210px;
+}
+}
+
+/* Tablet Styles */
+@media (max-width: 992px) {
+section {
+padding: 6rem 1.5rem;
+margin-bottom: 4rem;
+}
+
+nav {
+padding: 0 1.5rem;
+}
+
+.nav-links {
+gap: 1.5rem;
+}
+
+.social-container {
+gap: 2rem;
+}
+
+.contact-container {
+gap: 2rem;
+}
+
+h1 {
+font-size: 2.4rem;
+}
+
+.tagline {
+font-size: 1.2rem;
+}
+
+.profile-img {
+width: 190px;
+height: 190px;
+}
+
+.profile-back {
+width: 190px;
+height: 190px;
+}
+
+.info-card {
+padding: 2.2rem;
+}
+
+.skill-card {
+padding: 2.2rem;
+}
+
+.contact-form {
+padding: 2.2rem;
+}
+
+.social-card {
+width: 200px;
+height: 250px;
+}
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+header {
+padding: 0.8rem 0;
+}
+
+nav {
+padding: 0 1rem;
+}
+
+.logo {
+font-size: 1.3rem;
+}
+
+.logo img {
+width: 35px;
+height: 35px;
+}
+
+.menu-toggle {
+display: flex;
+}
+
+.nav-links {
+position: fixed;
+left: -100%;
+top: 70px;
+flex-direction: column;
+background-color: var(--dark-gradient);
+width: 100%;
+text-align: center;
+transition: 0.3s;
+box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+padding: 2rem 0;
+gap: 0;
+}
+
+.nav-links.active {
+left: 0;
+}
+
+.nav-links li {
+margin: 1rem 0;
+}
+
+main {
+margin-top: 70px;
+}
+
+section {
+padding: 5rem 1rem;
+margin-bottom: 3rem;
+}
+
+h1 {
+font-size: 2.2rem;
+}
+
+.tagline {
+font-size: 1.1rem;
+}
+
+.profile-img {
+width: 170px;
+height: 170px;
+}
+
+.profile-back {
+width: 170px;
+height: 170px;
+}
+
+.info-card {
+padding: 2rem;
+}
+
+.contact-container {
+grid-template-columns: 1fr;
+gap: 2rem;
+}
+
+.contact-form {
+padding: 2rem;
+}
+
+.social-container {
+flex-direction: column;
+align-items: center;
+gap: 2rem;
+}
+
+.social-card {
+width: 100%;
+max-width: 300px;
+height: 230px;
+}
+
+.footer-links {
+flex-wrap: wrap;
+gap: 1.5rem;
+}
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+header {
+padding: 0.6rem 0;
+}
+
+nav {
+padding: 0 0.8rem;
+}
+
+.logo {
+font-size: 1.1rem;
+}
+
+.logo img {
+width: 30px;
+height: 30px;
+}
+
+main {
+margin-top: 60px;
+}
+
+section {
+padding: 4rem 0.8rem;
+margin-bottom: 2.5rem;
+}
+
+h1 {
+font-size: 1.9rem;
+}
+
+.tagline {
+font-size: 1rem;
+}
+
+.profile-img {
+width: 150px;
+height: 150px;
+}
+
+.profile-back {
+width: 150px;
+height: 150px;
+}
+
+.info-card {
+padding: 1.5rem;
+}
+
+.info-item {
+margin-bottom: 1.2rem;
+padding: 0.6rem;
+}
+
+.info-item i {
+font-size: 1.3rem;
+margin-right: 0.8rem;
+}
+
+.contact-item {
+padding: 1rem;
+margin-bottom: 1.5rem;
+}
+
+.contact-item i {
+font-size: 1.8rem;
+margin-right: 1rem;
+}
+
+.contact-form {
+padding: 1.5rem;
+}
+
+.form-group {
+margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+padding: 0.8rem;
+}
+
+.btn {
+padding: 0.8rem 2rem;
+font-size: 0.9rem;
+}
+
+.social-card {
+height: 210px;
+padding: 1.5rem;
+}
+
+.social-card i {
+font-size: 3rem;
+}
+
+footer {
+padding: 2.5rem 0;
+}
+
+.social-icons a {
+width: 40px;
+height: 40px;
+}
+}
+
+/* Extra Small Mobile Styles */
+@media (max-width: 360px) {
+section {
+padding: 3.5rem 0.6rem;
+}
+
+h1 {
+font-size: 1.7rem;
+}
+
+.profile-img {
+width: 130px;
+height: 130px;
+}
+
+.profile-back {
+width: 130px;
+height: 130px;
+}
+
+.info-card {
+padding: 1.2rem;
+}
+
+.skill-card {
+padding: 1.8rem;
+}
+
+.contact-form {
+padding: 1.2rem;
+}
+
+.social-card {
+height: 190px;
+padding: 1.2rem;
+}
+
+.social-card i {
+font-size: 2.5rem;
+}
+}
+</style>
+</head>
+<body>
+<!-- Animated Background -->
+<div class="bg-animation">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<!-- Header -->
+<header id="header">
+<nav>
+<a href="#about" class="logo">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDwfJJ-l-2FKq0aEY6CKpi2KOkQcOyc8YQy8Rw8EqKCPXJxQLCMjb8sJnNLs_NGeWKuJvopiyH_7HvdyaCDurduqgrhtxIVzgLBxL45gP4LYk5oPZT2UxcRdqRZXj6UOipT_zoqqmKoo-Ux45BTm6LtU1ydF15hdIF5HLWahrJMbYOk8i2h3vU2e3jKXJq/s320/Untitled%20design%20(3).png" alt="Rao Mueez">
+<span class="logo-text">Meet me I am Mueez</span>
+</a>
+<div class="menu-toggle" id="mobile-menu">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<ul class="nav-links">
+<li><a href="#about">About Me</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact Me</a></li>
+<li><a href="#social">Social Media</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- Main Content -->
+<main>
+<!-- About Section -->
+<section id="about">
+<div class="profile-container">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDwfJJ-l-2FKq0aEY6CKpi2KOkQcOyc8YQy8Rw8EqKCPXJxQLCMjb8sJnNLs_NGeWKuJvopiyH_7HvdyaCDurduqgrhtxIVzgLBxL45gP4LYk5oPZT2UxcRdqRZXj6UOipT_zoqqmKoo-Ux45BTm6LtU1ydF15hdIF5HLWahrJMbYOk8i2h3vU2e3jKXJq/s320/Untitled%20design%20(3).png" alt="Rao Mueez" class="profile-img">
+<div class="profile-back">Hello!</div>
+</div>
+<h1>Rao Mueez</h1>
+<p class="tagline">Young Digital Creator & Student</p>
+<div class="info-card">
+<div class="info-item">
+<i class="fas fa-birthday-cake"></i>
+<div>
+<strong>Age:</strong> 12 years old
+</div>
+</div>
+<div class="info-item">
+<i class="fas fa-graduation-cap"></i>
+<div>
+<strong>Qualification:</strong> 6th Class Student
+</div>
+</div>
+<div class="info-item">
+<i class="fas fa-heart"></i>
+<div>
+<strong>Passion:</strong> Creating Digital Content
+</div>
+</div>
+<div class="info-item">
+<i class="fas fa-rocket"></i>
+<div>
+<strong>Dream:</strong> Becoming a Successful Creator
+</div>
+</div>
+</div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+<h2 style="text-align: center; margin-bottom: 1.5rem; background: var(--primary-gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">My Skills</h2>
+<div class="skills-container">
+<div class="skill-card">
+<i class="fas fa-palette"></i>
+<h3>Graphics Designer</h3>
+<p>Creating stunning visual designs with modern tools and techniques</p>
+</div>
+<div class="skill-card">
+<i class="fas fa-video"></i>
+<h3>Video Editor</h3>
+<p>Editing and producing engaging video content for various platforms</p>
+</div>
+<div class="skill-card">
+<i class="fas fa-laptop-code"></i>
+<h3>Digital Creator</h3>
+<p>Producing creative digital content across multiple platforms</p>
+</div>
+<div class="skill-card">
+<i class="fas fa-code"></i>
+<h3>Web Developer</h3>
+<p>Building responsive and interactive websites with modern technologies</p>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+<h2 style="text-align: center; margin-bottom: 2.5rem; background: var(--primary-gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">Contact Me</h2>
+<div class="contact-container">
+<div class="contact-info">
+<div class="contact-item">
+<i class="fas fa-phone"></i>
+<div>
+<strong>Phone:</strong> +92 303 6544786
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-envelope"></i>
+<div>
+<strong>Email:</strong> raomuhammadshahid786@gmail.com
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-map-marker-alt"></i>
+<div>
+<strong>Location:</strong> Pakistan
+</div>
+</div>
+</div>
+<div class="contact-form">
+<form id="contactForm">
+<div class="form-group">
+<label for="name">Your Name</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Your Email</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="4" required></textarea>
+</div>
+<button type="submit" class="btn">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+
+<!-- Social Media Section -->
+<section id="social">
+<h2 style="margin-bottom: 1.5rem; background: var(--primary-gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">Follow Me On Social Media</h2>
+<p style="margin-bottom: 2.5rem; color: #666;">Stay connected with my latest content and updates</p>
+<div class="social-container">
+<div class="social-card youtube">
+<i class="fab fa-youtube"></i>
+<h3>YouTube</h3>
+<a href="https://www.youtube.com/@Raoshahid7" target="_blank">@Raoshahid7</a>
+</div>
+<div class="social-card facebook">
+<i class="fab fa-facebook"></i>
+<h3>Facebook</h3>
+<a href="https://www.facebook.com/profile.php?id=61578564444494" target="_blank">Rao Mueez</a>
+</div>
+<div class="social-card tiktok">
+<i class="fab fa-tiktok"></i>
+<h3>TikTok</h3>
+<a href="https://www.tiktok.com/@rao_m_mueez?is_from_webapp=1&sender_device=pc" target="_blank">@rao_m_mueez</a>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer>
+<div class="footer-content">
+<div class="social-icons">
+<a href="https://www.youtube.com/@Raoshahid7" target="_blank"><i class="fab fa-youtube"></i></a>
+<a href="https://www.facebook.com/profile.php?id=61578564444494" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://www.tiktok.com/@rao_m_mueez?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+</div>
+<div class="footer-links">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+<a href="#social">Social Media</a>
+</div>
+<p>&copy; 2023 Rao Mueez. All rights reserved.</p>
+</div>
+</footer>
+<script>
+// Mobile Menu Toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', function() {
+navLinks.classList.toggle('active');
+
+// Animate hamburger menu
+const spans = mobileMenu.querySelectorAll('span');
+if (navLinks.classList.contains('active')) {
+spans[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
+spans[1].style.opacity = '0';
+spans[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+} else {
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+link.addEventListener('click', () => {
+navLinks.classList.remove('active');
+const spans = mobileMenu.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+});
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+behavior: 'smooth'
+});
+});
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+const header = document.getElementById('header');
+if (window.scrollY > 50) {
+header.classList.add('scrolled');
+} else {
+header.classList.remove('scrolled');
+}
+});
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+
+document.querySelectorAll('section').forEach(section => {
+observer.observe(section);
+});
+
+// Form submission
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+e.preventDefault();
+
+// Get form values
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const message = document.getElementById('message').value;
+
+// Create success message
+const successMessage = document.createElement('div');
+successMessage.style.padding = '1rem';
+successMessage.style.marginTop = '1rem';
+successMessage.style.borderRadius = '8px';
+successMessage.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+successMessage.style.color = 'white';
+successMessage.style.textAlign = 'center';
+successMessage.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
+
+// Add success message to form
+this.appendChild(successMessage);
+
+// Reset form
+this.reset();
+
+// Remove success message after 5 seconds
+setTimeout(() => {
+successMessage.remove();
+}, 5000);
+});
+
+// Add some interactive animations
+document.addEventListener('DOMContentLoaded', function() {
+// Animate profile image on load
+const profileImg = document.querySelector('.profile-img');
+setTimeout(() => {
+profileImg.style.transform = 'rotateY(360deg)';
+setTimeout(() => {
+profileImg.style.transform = 'rotateY(0deg)';
+}, 500);
+}, 500);
+
+// Add random floating animation to social cards
+const socialCards = document.querySelectorAll('.social-card');
+socialCards.forEach((card, index) => {
+card.style.animation = `float ${3 + index * 0.5}s ease-in-out infinite`;
+});
+});
+
+// Add floating animation
+const style = document.createElement('style');
+style.textContent = `
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+`;
+document.head.appendChild(style);
+</script>
+</body>
+</html>
